@@ -1,0 +1,743 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Courier;
+	panose-1:2 7 4 9 2 2 5 2 4 4;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"\@MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Cambria",serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#365F91;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:15.0pt;
+	margin-left:0in;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0in;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0in;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:15.0pt;
+	margin-left:0in;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Calibri",sans-serif;
+	color:#365F91;
+	font-weight:bold;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Calibri",sans-serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+.MsoChpDefault
+	{font-family:"Cambria",serif;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<div style='border:none;border-bottom:solid #4F81BD 1.0pt;padding:0in 0in 4.0pt 0in'>
+
+<p class=MsoTitle>Bicycle Gear and Chain Drive Analysis</p>
+
+</div>
+
+<p class=MsoNormal>This document presents detailed calculations for a standard
+21-speed bicycle with 3 front chainrings (22T, 32T, 42T) and 7 rear sprockets
+(14T, 16T, 18T, 20T, 22T, 24T, 28T). The wheel size is 700C (0.700 m diameter,
+2.199 m circumference), and crank length is 170 mm.</p>
+
+<p class=MsoNormal>Assumptions:<br>
+- Pedal force range: 100–300 N<br>
+- Crank length: 0.170 m<br>
+- Wheel radius: 0.35 m<br>
+- Wheel circumference: 2.199 m<br>
+- Cadences considered: 60 and 90 RPM<br>
+<br>
+</p>
+
+<h1>Standard Chain Drive Material</h1>
+
+<p class=MsoNormal>Most bicycle chains are made of medium carbon or alloy
+steels with surface treatments for durability.<br>
+- Inner/Outer Plates: Medium carbon steel (AISI 1050–1080)<br>
+- Rollers and Bushings: Case-hardened alloy steel<br>
+- Pins: Hardened alloy steel<br>
+<br>
+Surface Treatments:<br>
+- Nickel or zinc plating for corrosion resistance<br>
+- PTFE (Teflon) coatings for friction reduction<br>
+<br>
+Mechanical Properties:<br>
+- Tensile strength: 900–1200 MPa<br>
+- Hardness: 40–55 HRC after heat treatment<br>
+- Density: ~7.85 g/cm³</p>
+
+<h1>Gear Calculations</h1>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Front (T)</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Rear (T)</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Gear Ratio</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Meters/Rev</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Speed @60 RPM (km/h)</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Speed @90 RPM (km/h)</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Wheel Torque (N·m, Fp=200N)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>22</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>14</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1.571</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>3.46</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>12.4</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>18.7</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>152.7</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>22</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>16</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1.375</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>3.02</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>10.9</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>16.3</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>133.6</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>22</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>18</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1.222</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2.69</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>9.7</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>14.5</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>118.7</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>22</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>20</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1.100</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2.42</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>8.7</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>13.1</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>106.9</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>22</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>22</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1.000</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2.20</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>7.9</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>11.9</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>97.1</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>22</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>24</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>0.917</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2.02</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>7.3</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>10.9</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>89.0</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>22</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>28</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>0.786</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1.73</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>6.2</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>9.3</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>76.3</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>32</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>14</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2.286</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>5.03</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>18.1</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>27.1</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>222.0</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>32</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>16</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2.000</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>4.40</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>15.8</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>23.7</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>194.3</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>32</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>18</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1.778</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>3.91</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>14.1</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>21.1</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>172.7</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>32</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>20</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1.600</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>3.52</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>12.7</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>19.0</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>155.4</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>32</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>22</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1.455</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>3.20</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>11.5</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>17.3</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>141.3</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>32</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>24</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1.333</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2.93</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>10.6</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>15.8</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>129.5</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>32</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>28</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1.143</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2.51</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>9.0</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>13.6</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>111.0</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>42</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>14</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>3.000</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>6.60</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>23.7</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>35.6</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>291.4</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>42</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>16</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2.625</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>5.77</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>20.8</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>31.2</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>255.0</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>42</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>18</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2.333</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>5.13</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>18.5</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>27.7</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>226.7</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>42</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>20</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>2.100</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>4.62</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>16.6</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>24.9</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>204.0</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>42</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>22</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1.909</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>4.20</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>15.1</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>22.7</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>185.5</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>42</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>24</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1.750</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>3.85</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>13.9</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>20.8</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>170.0</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>42</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>28</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1.500</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>3.30</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>11.9</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>17.8</p>
+  </td>
+  <td width=82 valign=top style='width:61.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>145.7</p>
+  </td>
+ </tr>
+</table>
+
+<h1>Torque Range under Normal Cycling Conditions</h1>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=115 valign=top style='width:1.2in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Condition</p>
+  </td>
+  <td width=115 valign=top style='width:1.2in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Pedal Force (N)</p>
+  </td>
+  <td width=115 valign=top style='width:1.2in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Crank Torque (N·m)</p>
+  </td>
+  <td width=115 valign=top style='width:1.2in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Wheel Torque Min Gear (22/28)</p>
+  </td>
+  <td width=115 valign=top style='width:1.2in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Wheel Torque Max Gear (42/14)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=115 valign=top style='width:1.2in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Casual Cycling</p>
+  </td>
+  <td width=115 valign=top style='width:1.2in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>100</p>
+  </td>
+  <td width=115 valign=top style='width:1.2in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>17.0</p>
+  </td>
+  <td width=115 valign=top style='width:1.2in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>38.2</p>
+  </td>
+  <td width=115 valign=top style='width:1.2in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>145.7</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=115 valign=top style='width:1.2in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Strong Pedaling</p>
+  </td>
+  <td width=115 valign=top style='width:1.2in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>300</p>
+  </td>
+  <td width=115 valign=top style='width:1.2in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>51.0</p>
+  </td>
+  <td width=115 valign=top style='width:1.2in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>114.5</p>
+  </td>
+  <td width=115 valign=top style='width:1.2in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>437.1</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
